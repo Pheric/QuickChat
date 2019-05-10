@@ -31,6 +31,9 @@ defmodule FunctionTypes do
   end
 end
 
-to_who = :World # world is an Atom
-FunctionTypes.demo({"Hello", ", ", to_who, "!"})
-IO.puts "#{to_who}: Hello!" # string interpolation
+
+defmodule Message do
+  defstruct sender: "You", receiver: "World", message: "Hello!"
+
+  def send(msg), do: IO.puts("#{msg.sender}: @#{msg.receiver} #{msg.message}")
+end
