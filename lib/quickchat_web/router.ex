@@ -17,6 +17,8 @@ defmodule QuickchatWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/chat", ChatController, :index
+    get "/chat/:messenger", ChatController, :show
   end
 
   # Other scopes may use custom stacks.

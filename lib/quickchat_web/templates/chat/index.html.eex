@@ -1,0 +1,9 @@
+<div class="phx-hero">
+    <!--
+        Options:
+        - @messenger            (raises exceptions if unassigned)
+        - assigns.messenger
+        - assigns[:messenger]   (returns nil if unassigned)
+     -->
+    <h2>Hello World! <%= assigns[:messenger] %></h2>
+</div>
